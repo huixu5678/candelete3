@@ -1,0 +1,7 @@
+2021-07-02 15:58:03,926 INFO main [com.huixu.listener.TestngRetry]<clinit>(line:22)retrycount=2
+2021-07-02 15:58:03,930 INFO main [com.huixu.listener.TestngRetry]<clinit>(line:23)sourceCodeDir=src
+2021-07-02 15:58:03,930 INFO main [com.huixu.listener.TestngRetry]<clinit>(line:24)sourceCodeEncoding=UTF-8
+2021-07-02 15:58:07,769 INFO TestNG-test=Selenium_java-1 [com.huixu.listener.TestResultListener]info(line:41)testBidu Start
+2021-07-02 15:58:08,668 INFO TestNG-test=Selenium_java-1 [com.huixu.listener.TestResultListener]info(line:41)打开网址：http://www.baidu.com
+2021-07-02 15:58:08,821 INFO TestNG-test=Selenium_java-1 [com.huixu.listener.TestResultListener]info(line:41)testBidu Success
+2021-07-02 15:58:08,835 INFO main [com.huixu.listener.TestResultListener]info(line:41)PassedTests = testBidu
