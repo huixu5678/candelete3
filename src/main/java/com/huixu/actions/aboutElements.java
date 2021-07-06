@@ -1,7 +1,7 @@
 package com.huixu.actions;
 
 import com.huixu.drivers.SeleniumDrivers;
-import com.huixu.log4j.Log4j2;
+//import com.huixu.log4j.Log4j2;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -11,7 +11,7 @@ import java.util.List;
 
 public class aboutElements extends SeleniumDrivers
  {
-     static Log4j2 log= Log4j2.getlogger(aboutElements.class);
+//     static Log4j2 log= Log4j2.getlogger(aboutElements.class);
 
      public static WebElement findElement(final By by){
 
@@ -20,7 +20,7 @@ public class aboutElements extends SeleniumDrivers
              WebDriverWait wait = new WebDriverWait(driver, 10);
              wait.until(ExpectedConditions.presenceOfElementLocated(by));
          }catch(Exception e){
-             log.err("元素："+by+"查找超时！！！");
+//             log.err("元素："+by+"查找超时！！！");
              e.printStackTrace();
          }
 
@@ -34,7 +34,7 @@ public class aboutElements extends SeleniumDrivers
              WebDriverWait wait = new WebDriverWait(driver, 10);
              wait.until(ExpectedConditions.presenceOfElementLocated(by));
          }catch(Exception e){
-             log.err("元素："+by+"查找超时！！！");
+//             log.err("元素："+by+"查找超时！！！");
              e.printStackTrace();
          }
 
@@ -51,7 +51,7 @@ public class aboutElements extends SeleniumDrivers
          WebElement element=aboutElements.findElement(by);
          element.clear();
          element.sendKeys(text);
-         log.info("在文本框"+by+"中输入文本："+text);
+//         log.info("在文本框"+by+"中输入文本："+text);
      }
 
      public static String getText(By by){
@@ -61,6 +61,6 @@ public class aboutElements extends SeleniumDrivers
      public static void click(By by){
 
          aboutElements.findElement(by).click();
-         log.info("点击："+by);
+//         log.info("点击："+by);
      }
 }
