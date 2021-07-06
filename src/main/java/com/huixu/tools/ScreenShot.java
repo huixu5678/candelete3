@@ -2,7 +2,7 @@ package com.huixu.tools;
 
 
 import com.huixu.drivers.SeleniumDrivers;
-import com.huixu.log4j.Log4j;
+
 import org.apache.commons.io.FileUtils;
 
 import org.openqa.selenium.OutputType;
@@ -17,7 +17,7 @@ import java.io.IOException;
  * Created by lenovo on 2016/11/12.必须要继承SeleniumDrivers
  */
 public class ScreenShot extends SeleniumDrivers {
-    static final Log4j log = Log4j.getlogger(ScreenShot.class);
+//    static final Log4j2 log = Log4j2.getlogger(ScreenShot.class);
     static String path = System.getProperties().getProperty("user.dir") + "/error/";
     /**
      * 错误截图，通过日期命名的截图
@@ -34,7 +34,7 @@ public class ScreenShot extends SeleniumDrivers {
             String times= DateFormate.format(DateFormate.SDF_DAY_TIMES);
             FileUtils.copyFile(file,new File(myPath + "/" +times+".jpg"));
             } catch (IOException e) {
-            log.err("截图失败！！");
+//            log.err("截图失败！！");
             e.printStackTrace();
         }
     }
@@ -47,10 +47,10 @@ public class ScreenShot extends SeleniumDrivers {
         try {
             File_my myFile = new File_my();
             myFile.createFile(path + DateFormate.format(DateFormate.SDF_DAYS));
-            log.info(DateFormate.format(DateFormate.SDF_DAYS));
+//            log.info(DateFormate.format(DateFormate.SDF_DAYS));
             FileUtils.copyFile(file,new File(path + DateFormate.format(DateFormate.SDF_DAYS) + "/" + name + ".jpg"));
         } catch (IOException e) {
-            log.err("截图失败！！");
+//            log.err("截图失败！！");
             e.printStackTrace();
         }
     }

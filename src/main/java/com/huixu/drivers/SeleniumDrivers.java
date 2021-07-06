@@ -1,14 +1,12 @@
 package com.huixu.drivers;
 
-import com.huixu.log4j.Log4j;
+//import com.huixu.log4j.Log4j2;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
 
 import java.net.URL;
 
@@ -16,7 +14,7 @@ public class SeleniumDrivers {
 
     public static WebDriver driver;
 
-    static Log4j logger= Log4j.getlogger(SeleniumDrivers.class);
+//    static Log4j2 logger= Log4j2.getlogger(SeleniumDrivers.class);
     public static WebDriver loadBrowser(String browser){
         String driverPath=System.getProperty("user.dir");
         if(browser.equals("chrome")){
@@ -33,7 +31,7 @@ public class SeleniumDrivers {
             driver=new InternetExplorerDriver();
             driver.manage().window().maximize();
         }else{
-            logger.err("您提供的浏览器名称有误");
+//            logger.err("您提供的浏览器名称有误");
 
         }
         return driver;
@@ -50,7 +48,7 @@ public class SeleniumDrivers {
             url="http://"+url;
         }
         driver.get(url);
-        logger.info("打开网址："+url);
+//        logger.info("打开网址："+url);
     }
 
     public static WebDriver loadBrowser_grid(String browser,String url)throws Exception{

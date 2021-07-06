@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Selenium_java" />
         <module name="Selenium_java2" />
+        <module name="Selenium_java3" />
       </profile>
     </annotationProcessing>
   </component>

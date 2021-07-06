@@ -1,6 +1,6 @@
 package com.huixu.asserts;
 
-import com.huixu.log4j.Log4j;
+import com.huixu.log4j.Log4j2;
 import com.huixu.tools.ScreenShot;
 import org.testng.Assert;
 import org.testng.collections.Lists;
@@ -16,7 +16,7 @@ import static org.testng.internal.EclipseInterface.*;
  * Created by 米阳 on 2016/6/23.
  */
 public class Assert_my extends Assert {
-    static final Log4j logger = Log4j.getlogger(Assert_my.class);
+    static final Log4j2 logger = Log4j2.getlogger(Assert_my.class);
 
     /**
      * Asserts that a condition is true. If it isn't,

@@ -1,7 +1,7 @@
 package com.huixu.actions;
 
 import com.huixu.drivers.SeleniumDrivers;
-import com.huixu.log4j.Log4j;
+import com.huixu.log4j.Log4j2;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -11,7 +11,7 @@ import java.util.List;
 
 public class aboutElements extends SeleniumDrivers
  {
-     static Log4j log= Log4j.getlogger(aboutElements.class);
+     static Log4j2 log= Log4j2.getlogger(aboutElements.class);
 
      public static WebElement findElement(final By by){
 

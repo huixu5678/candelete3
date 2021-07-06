@@ -1,8 +1,7 @@
 package com.huixu.listener;
 
 import com.huixu.tools.ScreenShot;
-import com.huixu.log4j.Log4j;
-import org.apache.log4j.Logger;
+import com.huixu.log4j.Log4j2;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
@@ -17,7 +16,7 @@ import java.util.*;
  */
 public class TestResultListener extends TestListenerAdapter {
 
-	private static Log4j logger = Log4j.getlogger(TestResultListener.class);
+	private static Log4j2 logger = Log4j2.getlogger(TestResultListener.class);
 
 	@Override
 	public void onTestFailure(ITestResult tr) {
