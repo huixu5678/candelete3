@@ -1,6 +1,6 @@
 package com.huixu.asserts;
 
-import com.huixu.log4j.Log4j2;
+//import com.huixu.log4j.Log4j2;
 import com.huixu.tools.ScreenShot;
 import org.testng.Assert;
 import org.testng.collections.Lists;
@@ -16,7 +16,7 @@ import static org.testng.internal.EclipseInterface.*;
  * Created by 米阳 on 2016/6/23.
  */
 public class Assert_my extends Assert {
-    static final Log4j2 logger = Log4j2.getlogger(Assert_my.class);
+//    static final Log4j2 logger = Log4j2.getlogger(Assert_my.class);
 
     /**
      * Asserts that a condition is true. If it isn't,
@@ -1016,7 +1016,7 @@ public class Assert_my extends Assert {
     static public void fail(String message) {
 //        调用截图方法
         ScreenShot.screenShots();
-        logger.err("校验失败");
+//        logger.err("校验失败");
         throw new AssertionError(message);
     }
 
@@ -1032,12 +1032,12 @@ public class Assert_my extends Assert {
      */
     public static void assertStartWith(String content, String prefix, String message) {
         if (message != null)
-            logger.info(message);
+//            logger.info(message);
 
         if (content.startsWith(prefix)) {
-            logger.info("前缀匹配校验成功");
+//            logger.info("前缀匹配校验成功");
         } else {
-            logger.err("前缀匹配校验失败！\n待校验的字符窜为:" + content + "\n校验的前缀表达式为:" + prefix);
+//            logger.err("前缀匹配校验失败！\n待校验的字符窜为:" + content + "\n校验的前缀表达式为:" + prefix);
             Assert_my.fail();
         }
     }
@@ -1062,12 +1062,12 @@ public class Assert_my extends Assert {
      */
     public static void assertEndWith(String content, String endfix, String message) {
         if (message != null)
-            logger.info(message);
+//            logger.info(message);
 
         if (content.endsWith(endfix)) {
-            logger.info("后缀匹配校验成功！");
+//            logger.info("后缀匹配校验成功！");
         } else {
-            logger.err("后缀匹配校验失败！\n待校验的字符窜为:" + content + "\n校验的后缀表达式为:" + endfix);
+//            logger.err("后缀匹配校验失败！\n待校验的字符窜为:" + content + "\n校验的后缀表达式为:" + endfix);
             Assert_my.fail();
         }
     }
@@ -1092,12 +1092,12 @@ public class Assert_my extends Assert {
      */
     public static void assertMatch(String matcher, String regex, String message) {
         if (message != null)
-            logger.info(message);
+//            logger.info(message);
 
         if (Pattern.matches(regex, matcher)) {
-            logger.info("匹配校验成功！");
+//            logger.info("匹配校验成功！");
         } else {
-            logger.err("匹配校验失败！\n待校验的字符串为:" + matcher + "\n校验的正则表达式为:" + regex);
+//            logger.err("匹配校验失败！\n待校验的字符串为:" + matcher + "\n校验的正则表达式为:" + regex);
             Assert_my.fail();
         }
     }
@@ -1121,12 +1121,12 @@ public class Assert_my extends Assert {
      */
     public static void assertNoMatch(String matcher, String regex, String message) {
         if (message != null)
-            logger.info(message);
+//            logger.info(message);
 
         if (!Pattern.matches(regex, matcher)) {
-            logger.info("匹配校验成功！");
+//            logger.info("匹配校验成功！");
         } else {
-            logger.err("匹配校验失败！\n待校验的字符串为:" + matcher + "\n校验的正则表达式为:" + regex);
+//            logger.err("匹配校验失败！\n待校验的字符串为:" + matcher + "\n校验的正则表达式为:" + regex);
             Assert_my.fail();
         }
     }
@@ -1152,11 +1152,11 @@ public class Assert_my extends Assert {
     public static void assertInclude(String content, String included, String message) {
         System.out.println("body的内容content :++++++"+content);
         if (message != null)
-            logger.info(message);
+//            logger.info(message);
         if (content.contains(included)) {
-            logger.info("匹配校验成功！");
+//            logger.info("匹配校验成功！");
         } else {
-            logger.err("匹配校验失败！\n待校验的字符串为:" + content + "\n包含字符串为:" + included);
+//            logger.err("匹配校验失败！\n待校验的字符串为:" + content + "\n包含字符串为:" + included);
             Assert_my.fail(message);
         }
     }
